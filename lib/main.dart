@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mealmonkey/Source/pages.dart';
-import 'package:mealmonkey/Styles/Styles.dart';
+import 'package:mealmonkey/Styles/styles.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/" : (context) => const IntroPage(),
         "/intro" :(context) =>  SecondIntroPage(),
+        "/starter" : (context) =>  StarterPAge(),
       },
       debugShowCheckedModeBanner: false,
       ) );

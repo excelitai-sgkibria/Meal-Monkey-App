@@ -25,7 +25,6 @@ class _SecondIntroPageState extends State<SecondIntroPage> {
 
         ) {
       _activeindex = _controller.page!.round();
-
     });});
     return  Scaffold(
       backgroundColor: Colors.white,
@@ -81,10 +80,17 @@ class _SecondIntroPageState extends State<SecondIntroPage> {
             child: Expanded(
               child: ElevatedButton(
                   onPressed: (){
-                if((_activeindex + 1)>=_data.length) return;
+                if((_activeindex + 1)>=_data.length) {
+                  Navigator.pushReplacementNamed(context, '/starter');
+                  return;
+                }
                 _controller.animateToPage(_activeindex +1,
                     duration:const Duration(milliseconds: 250),
                     curve:Curves.easeIn);
+
+                return;
+
+
               },
                   style: ButtonStyle(
                     shape: MaterialStateProperty.all<OutlinedBorder>(
