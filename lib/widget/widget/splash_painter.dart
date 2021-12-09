@@ -10,6 +10,7 @@ class Splashpainter extends StatelessWidget {
           child: Image.asset("assets/starter_background2.png",
           alignment: Alignment.topCenter,
           width: MediaQuery.of(context).size.width,
+          height: 1000.h,
           fit: BoxFit.contain,
           )
     );

@@ -35,33 +35,41 @@ class _StarterPAgeState extends State<StarterPAge> {
 
               ),
               SizedBox(height: 125.h,),
-              ElevatedButton(onPressed: (){},
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(onPressed: (){
+                  Navigator.pushReplacementNamed(context, kRouteLogin);
+                },
+                    style: ElevatedButton.styleFrom(
+                      primary: mainColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                      minimumSize: const Size(double.infinity,50),
+                      padding:const EdgeInsets.all(16),
+                    ),
+
+                    child: Text("Log In")
+                ),
+              ),
+              SizedBox(height: 20.h),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(onPressed: (){},
                   style: ElevatedButton.styleFrom(
-                    primary: mainColor,
+                    primary: Colors.white,
                     shape: RoundedRectangleBorder(
+                      side: BorderSide(color: mainColor),
                       borderRadius: BorderRadius.circular(50),
                     ),
                     minimumSize: const Size(double.infinity,50),
                     padding:const EdgeInsets.all(16),
                   ),
-
-                  child: Text("Log In")
-              ),
-              SizedBox(height: 50.h),
-
-              ElevatedButton(onPressed: (){},
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    side: BorderSide(color: mainColor),
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                  minimumSize: const Size(double.infinity,50),
-                  padding:const EdgeInsets.all(16),
+                child: Text('Create An Account',style: TextStyle(
+                  color: mainColor,
+                ),),
                 ),
-              child: Text('Create An Account',style: TextStyle(
-                color: mainColor,
-              ),),
               ),
 
             ],

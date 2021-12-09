@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mealmonkey/Source/pages.dart';
 import 'package:mealmonkey/Styles/styles.dart';
 
+import 'constants.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -18,6 +20,27 @@ class MyApp extends StatelessWidget {
         builder: () => MaterialApp(
       title: 'Meal Monkey Demo',
       theme: ThemeData(
+        elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+    //primary: mainColor,
+    shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(50),
+    ),
+      padding: EdgeInsets.all(kButtonPadding),
+      minimumSize: Size(double.infinity, kButtonPadding)
+    ),
+        ),
+        
+        inputDecorationTheme: InputDecorationTheme(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(50),
+            borderSide: BorderSide.none,
+          ),
+          floatingLabelStyle: const TextStyle(
+            color: secondarycolor,
+          ),
+          contentPadding: EdgeInsets.symmetric(vertical:4,horizontal: 28)
+        ),
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll  see the
@@ -30,9 +53,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: {
-        "/" : (context) => const IntroPage(),
-        "/intro" :(context) =>  SecondIntroPage(),
-        "/starter" : (context) =>  StarterPAge(),
+        kRouteRoot: (context) =>  IntroPage(),
+        kRouteIntro :(context) =>   SecondIntroPage(),
+        kRouteStarter : (context) =>  StarterPAge(),
+        kRouteLogin :(context) =>   Login(),
       },
       debugShowCheckedModeBanner: false,
       ) );
