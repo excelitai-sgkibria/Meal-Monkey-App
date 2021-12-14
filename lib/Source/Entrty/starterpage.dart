@@ -56,7 +56,9 @@ class _StarterPAgeState extends State<StarterPAge> {
 
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton(onPressed: (){},
+                child: ElevatedButton(onPressed: (){
+                  Navigator.pushReplacementNamed(context, kRouteRegister);
+                },
                   style: ElevatedButton.styleFrom(
                     primary: Colors.white,
                     shape: RoundedRectangleBorder(

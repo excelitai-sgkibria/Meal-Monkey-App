@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mealmonkey/Source/pages.dart';
 import 'package:mealmonkey/Styles/styles.dart';
 
-import 'constants.dart';
+import 'Styles/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,6 +57,10 @@ class MyApp extends StatelessWidget {
         kRouteIntro :(context) =>   SecondIntroPage(),
         kRouteStarter : (context) =>  StarterPAge(),
         kRouteLogin :(context) =>   Login(),
+        kRouteRegister :(context) => Register_Page(),
+        kRouteRooteEnterEmail :(context) => EnterEmailPage(),
+        kRouteRooteEnterOtp :(context) => Enter_Otp(),
+
       },
       debugShowCheckedModeBanner: false,
       ) );

@@ -10,7 +10,7 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 14),
+      padding: const EdgeInsets.symmetric(vertical: 15),
       decoration: BoxDecoration(
         color: fontcolor,
         borderRadius: BorderRadius.circular(50),
@@ -21,8 +21,7 @@ class CustomTextFormField extends StatelessWidget {
           decoration: InputDecoration(
             labelText:labelText ,
             isCollapsed: true,
-          )
-
+          ),
         ),
       );
   }
