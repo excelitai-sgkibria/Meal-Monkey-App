@@ -15,7 +15,6 @@ class Enter_Otp extends StatelessWidget {
         ),
       ),
       body: Container(
-        color: Colors.blue,
         padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
         height: MediaQuery
             .of(context)
